@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Feature</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{
+    min-height:100vh;
+    background:#050505;
+    color:white;
+    text-align:center;
+    overflow:hidden;
+}
+.bg{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    background:
+        repeating-linear-gradient(45deg,rgba(0,255,150,.18) 0 20px,transparent 20px 40px),
+        repeating-linear-gradient(-45deg,rgba(0,180,255,.12) 0 20px,transparent 20px 40px);
+    filter:blur(16px);
+    animation:bgMove 22s linear infinite;
+}
+@keyframes bgMove{
+    from{background-position:0 0}
+    to{background-position:700px 700px}
+}
+.back{
+    position:fixed;
+    top:14px;
+    left:14px;
+    padding:6px 12px;
+    background:#00ff88;
+    color:black;
+    border-radius:8px;
+    box-shadow:0 0 12px #00ff88;
+}
+.avatar{
+    width:100px;
+    height:100px;
+    margin:60px auto 10px;
+    border-radius:50%;
+    background:#111;
+    box-shadow:0 0 15px #00ff88;
+}
+input,button{
+    width:85%;
+    padding:12px;
+    margin-top:10px;
+    border-radius:10px;
+    border:none;
+}
+button{
+    background:#00ff88;
+    color:black;
+    box-shadow:0 0 15px #00ff88;
+}
+.list{
+    display:none;
+    width:85%;
+    margin:10px auto;
+    background:#000;
+    border-radius:10px;
+}
+.list div{
+    padding:10px;
+    border-bottom:1px solid #033;
+}
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+<div class="back" onclick="location.href='page2.html'">Back</div>
+
+<div class="avatar"></div>
+<h3>DRAZ VERSE<br>FEATURE</h3>
+
+<input placeholder="No Target / Link">
+<button id="pick" onclick="list.style.display=list.style.display==='block'?'none':'block'">Pilihan Fitur</button>
+
+<div id="list" class="list">
+<div onclick="set('Bug Crash')">Bug Crash</div>
+<div onclick="set('Bug Delay')">Bug Delay</div>
+<div onclick="set('Bug Force Close')">Bug Force Close</div>
+<div onclick="set('Bug Phone Off')">Bug Phone Off</div>
+<div onclick="set('Bug Super')">Bug Super</div>
+<div onclick="set('Bug Reset😈')">Bug Reset😈</div>
+<div onclick="set('Tiktok Downloader')">Tiktok Downloader</div>
+<div onclick="set('Instagram Downloader')">Instagram Downloader</div>
+<div onclick="set('Pinterest Downloader')">Pinterest Downloader</div>
+</div>
+
+<button id="action">Send Bug</button>
+
+<script>
+function set(v){
+    pick.innerText=v;
+    list.style.display="none";
+    action.innerText = v.includes("Downloader") ? "Download" : "Send Bug";
+}
+</script>
+
+</body>
+</html>

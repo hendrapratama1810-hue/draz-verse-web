@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>DRAZ VERSE 1.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{
+    min-height:100vh;
+    background:#050505;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+.bg{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    background:
+        repeating-linear-gradient(45deg,rgba(0,255,150,.18) 0 20px,transparent 20px 40px),
+        repeating-linear-gradient(-45deg,rgba(0,180,255,.12) 0 20px,transparent 20px 40px);
+    filter:blur(16px);
+    animation:bgMove 22s linear infinite;
+}
+@keyframes bgMove{
+    from{background-position:0 0}
+    to{background-position:700px 700px}
+}
+.container{
+    width:92%;
+    max-width:360px;
+    background:rgba(0,0,0,.7);
+    padding:22px;
+    border-radius:16px;
+    text-align:center;
+}
+.banner{
+    height:80px;
+    border-radius:10px;
+    background:#111;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#666;
+    margin-bottom:15px;
+}
+input{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:none;
+    border-radius:10px;
+    background:#111;
+    color:#00ff88;
+    box-shadow:0 0 8px rgba(0,255,136,.4);
+}
+.btn{
+    width:100%;
+    padding:13px;
+    margin-top:12px;
+    border:none;
+    border-radius:10px;
+    background:#00ff88;
+    color:black;
+    font-weight:bold;
+    box-shadow:0 0 12px #00ff88,0 0 30px rgba(0,255,136,.7);
+}
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="container">
+    <div class="banner">GIF BANNER (standard.gif)</div>
+    <h2>DRAZ VERSE 1.0</h2>
+
+    <input id="user" placeholder="Username">
+    <input id="pw" type="password" placeholder="Password">
+
+    <button class="btn" onclick="login()">LOGIN</button>
+
+    <a href="https://wa.me/6283817102474?text=mau+access+apk+bug+DRAZ+verse+bang">
+        <button class="btn" style="background:#25D366;box-shadow:0 0 15px #25D366">
+            Contact Us For Access
+        </button>
+    </a>
+</div>
+
+<script>
+function login(){
+    if(user.value==="DRAZX" && pw.value==="12"){
+        location.href="page2.html";
+    }else{
+        location.href="about:blank";
+    }
+}
+</script>
+
+</body>
+</html>
